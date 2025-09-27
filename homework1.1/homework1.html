@@ -12,37 +12,34 @@
     />
 
     <style>
-      /* ===== TEMEL SAYFA AYARLARI ===== */
       body {
         margin: 0;
-        background: #fff; /* tam beyaz arka plan */
+        background: #fff;
         font-family: "Afacad", Arial, sans-serif;
         color: #111;
         text-align: center;
       }
 
-      /* Sağ üstte derece + şehir */
       .weather {
-        position: absolute; /* sayfanın sağ üst köşesine sabitler */
+        position: absolute;
         top: 20px;
         right: 18px;
         text-align: right;
-        font-size: 32px; /* 36° yazısı */
+        font-size: 32px;
         line-height: 1.1;
       }
       .weather .city {
-        display: block; /* alt satıra insin */
+        display: block;
         margin-top: 6px;
         font-size: 20px;
-        color: #6e6cdf; /* mor ton */
+        color: #6e6cdf;
         font-weight: 700;
       }
 
-      /* Saat ve selamlama */
       .clock {
-        font-size: 74px; /* masaüstü için büyük */
+        font-size: 74px;
         font-weight: 800;
-        margin: 260px 0 10px; /* yukarıdan boşluk + aşağıdan küçük boşluk */
+        margin: 260px 0 10px;
       }
       .greet {
         font-size: 36px;
@@ -51,19 +48,18 @@
         margin: 0 0 28px;
       }
 
-      /* ===== ARAMA KUTUSU ===== */
       .search {
-        width: 620px; /* masaüstü genişliği */
-        max-width: 92%; /* dar ekranda taşmasın */
+        width: 620px;
+        max-width: 92%;
         height: 65px;
-        margin: 0 auto 26px; /* ortala + alttan küçük boşluk */
+        margin: 0 auto 26px;
         padding: 0 14px;
         display: flex;
         align-items: center;
         gap: 10px;
-        background: #fafafa; /* açık gri dolgu */
-        border: 1px solid #eee; /* ince gri çizgi */
-        border-radius: 16px; /* pill görünüm */
+        background: #fafafa;
+        border: 1px solid #eee;
+        border-radius: 16px;
         box-sizing: border-box;
       }
 
@@ -71,12 +67,11 @@
         width: 12px;
         height: 12px;
         display: block;
-        opacity: 0.6; /* soluk dursun */
+        opacity: 0.6;
       }
 
-      /* Yazı alanı */
       .search input {
-        flex: 1; /* kalan alanın tamamını kapla */
+        flex: 1;
         border: none;
         outline: none;
         background: transparent;
@@ -85,13 +80,12 @@
       }
       .search input::placeholder {
         color: #9aa2b1;
-      } /* soluk placeholder */
+      }
 
-      /* ===== ALTTAKİ UYGULAMA İKONLARI ===== */
       .icons {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap; /* gerekirse alt satıra geçsin */
+        flex-wrap: wrap;
         gap: 14px;
         margin: 0 auto 40px;
         max-width: 92%;
@@ -112,9 +106,7 @@
         display: block;
       }
 
-      /* ===== MOBİL (480px ve altı) — hedef görsele birebir ayarlandı ===== */
       @media (max-width: 480px) {
-        /* derece ve şehir biraz küçülsün, kenara iyice yaklaşsın */
         .weather {
           top: 12px;
           right: 10px;
@@ -125,7 +117,6 @@
           margin-top: 4px;
         }
 
-        /* saat ve selamlama daha küçük ve biraz yukarıda */
         .clock {
           font-size: 44px;
           margin: 120px 0 10px;
@@ -135,11 +126,10 @@
           margin-bottom: 24px;
         }
 
-        /* arama çubuğu neredeyse tam genişlik ve daha aşağıda */
         .search {
           height: 52px;
           max-width: 92%;
-          margin-top: 140px; /* >>> aramayı aşağı itmek için (hedefteki gibi) */
+          margin-top: 140px;
           margin-bottom: 18px;
           border-radius: 16px;
         }
@@ -155,7 +145,6 @@
           font-size: 14px;
         }
 
-        /* ikonlar biraz küçülsün; satır arası boşluk ufak */
         .icons {
           gap: 12px;
           margin-bottom: 26px;
@@ -166,7 +155,6 @@
           border-radius: 10px;
         }
 
-        /* SADECE MOBİLDE LinkedIn ve + ikonlarını gizle */
         .hide-mobile {
           display: none;
         }
@@ -182,16 +170,13 @@
     <h1 class="clock">09:11:01</h1>
     <p class="greet">Good Morning, Saad.</p>
 
-    <!-- arama kutusu (solda açık gri yuvarlak içinde büyüteç) -->
     <div class="search">
       <div class="search-bubble">
-        <!-- yerel ikon dosyan; istersen PNG/SVG fark etmez -->
         <img src="images/search-01.svg" alt="Search" />
       </div>
       <input type="text" placeholder="Search" />
     </div>
 
-    <!-- uygulama ikonları -->
     <div class="icons">
       <div class="icon"><img src="images/youtube.png" alt="Youtube" /></div>
       <div class="icon"><img src="images/chat-gpt.png" alt="Chatgpt" /></div>
@@ -205,7 +190,6 @@
         <img src="images/icons8-github-48.png" alt="Github" />
       </div>
 
-      <!-- Bu ikisi masaüstünde görünür, mobilde gizlenir -->
       <div class="icon hide-mobile">
         <img src="images/icons8-linked-in-48.png" alt="Linkedin" />
       </div>
